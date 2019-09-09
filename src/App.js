@@ -14,6 +14,7 @@ function App() {
   const [myMap, setMyMap] = useState(new Map([['1','one'],['2', 'two'], ['3', 'three']]));
   const [keyToGet, setKeytToGet]= useState('');
   const [valueToGet, setValueToGet]= useState('');
+  
   function renderMapValue(myMap) {
     let mapToArray = Array.from(myMap.keys());
     debugger;
@@ -24,6 +25,7 @@ function App() {
       </ul>
     );
   }
+
   function put(key, value) {
     const updatedMap = new Map(myMap);
     if(updatedMap.has(key)){
@@ -49,6 +51,7 @@ function App() {
     setValueToGet(mapValue);
     return mapValue;
   }
+
   return (
     <div className="App">
       <div>
@@ -95,7 +98,6 @@ function App() {
         <p> Current list values</p>
         {renderMapValue(myMap)}
       </div>
-
       </div>
     </div>
   );
